@@ -24,11 +24,11 @@ Habit.create(name: "Bird-watching", description: "Get in touch with your natural
 Habit.create(name: "Reading", description: "Explore the world as a broke person")
 Habit.create(name: "Working", description: "Do what's necessary")
 
-Activity.create(name: "Running" , description: "feet fast", habit_id: Habit.all.sample)
-Activity.create(name: "Eating" , description: "oreos", habit_id: Habit.all.sample)
-Activity.create(name: "Jumping" , description: "reach the stars" , habit_id: Habit.all.sample)
-Activity.create(name: "Sprinting" , description: "Usain Bolt", habit_id: Habit.all.sample)
-Activity.create(name: "Flying" , description: "pigiotto", habit_id: Habit.all.sample)
+Activity.create(name: "Running" , description: "feet fast", habit_id: Habit.all.sample.id)
+Activity.create(name: "Eating" , description: "oreos", habit_id: Habit.all.sample.id)
+Activity.create(name: "Jumping" , description: "reach the stars" , habit_id: Habit.all.sample.id)
+Activity.create(name: "Sprinting" , description: "Usain Bolt", habit_id: Habit.all.sample.id)
+Activity.create(name: "Flying" , description: "pigiotto", habit_id: Habit.all.sample.id)
 
 #order matters when seeding data, bc data needs to exist for id's 
 #in order for it to be there. cool.
