@@ -12,7 +12,7 @@ class HabitsController < ApplicationController
     end
 
     def create
-        @habit = Habit.create(habits_params)
+        @habit = Habit.create(habit_params)
         redirect_to habit_path(@habit)
     end
 
@@ -22,7 +22,7 @@ class HabitsController < ApplicationController
 
     def update
         @habit = Habit.find(params[:id])
-        @habit.update(habits_params)
+        @habit.update(habit_params)
         redirect_to habit_path(@habit)
     end
 
@@ -34,7 +34,7 @@ class HabitsController < ApplicationController
 
     private
 
-    def habits_params
+    def habit_params
         params.require(:habit).permit(:name, :description)
     end
 end

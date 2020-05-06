@@ -1,0 +1,6 @@
+<h1> <%= @habit.name %> </h1>
+<p> Description: <%= @habit.description %> </p>
+
+<p> <% @habit.activity.each do |activity| %> </p>
+<p> <%= link_to activity.name, activity_path(activity) %> </p>
+<% end %>

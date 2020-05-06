@@ -1,0 +1,15 @@
+<h2> New Habit </h2>
+
+<%= form_for @habit do |f| %>
+    <%= f.label :Name %><br>
+    <%= f.text_field :name %>
+    <br><br>
+    
+    <%= f.label :Description %><br>
+    <%= f.text_area :description %><br>
+
+    <%= f.submit %>
+<% end %>
+
+label is the text that appears in front of the drop down
+user_id

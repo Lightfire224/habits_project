@@ -1,0 +1,5 @@
+<h1> Habits Index </h1>
+
+<p> <% @habits.each do |habit| %> </p>
+<p> <%= link_to habit.name, habit_path(habit) %> </p>
+<% end %>

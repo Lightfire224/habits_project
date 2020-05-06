@@ -11,6 +11,7 @@
 User.destroy_all
 Habit.destroy_all
 Activity.destroy_all
+UserActivity.destroy_all
 
 User.create(name: "Bob" , age: 18 , occupation: "Bob_job" )
 User.create(name: "Bob_2" , age: 18 , occupation: "Bob_job_2" )
@@ -29,6 +30,12 @@ Activity.create(name: "Eating" , description: "oreos", habit_id: Habit.all.sampl
 Activity.create(name: "Jumping" , description: "reach the stars" , habit_id: Habit.all.sample.id)
 Activity.create(name: "Sprinting" , description: "Usain Bolt", habit_id: Habit.all.sample.id)
 Activity.create(name: "Flying" , description: "pigiotto", habit_id: Habit.all.sample.id)
+
+UserActivity.create(user_id: User.all.sample.id, habit_id: Habit.all.sample.id)
+UserActivity.create(user_id: User.all.sample.id, habit_id: Habit.all.sample.id)
+UserActivity.create(user_id: User.all.sample.id, habit_id: Habit.all.sample.id)
+
+
 
 #order matters when seeding data, bc data needs to exist for id's 
 #in order for it to be there. cool.
