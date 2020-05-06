@@ -13,7 +13,7 @@ class UserActivitiesController < ApplicationController
 
     def create
         @user_activity = UserActivity.create(user_activity_params)
-        redirect_to user_activity_path(@user_activity)
+        redirect_to user_path(@user_activity.user_id)
     end
 
     def edit
@@ -35,6 +35,6 @@ class UserActivitiesController < ApplicationController
     private
 
     def user_activity_params
-        params.require(:user_activity).permit(:user_id, :activity_id)
+        params.require(:user_activity).permit(:user_id, :habit_id)
     end
 end

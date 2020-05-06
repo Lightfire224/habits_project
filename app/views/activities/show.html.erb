@@ -1,0 +1,4 @@
+<h1> <%= @activity.name %> </h1>
+<p> Description: <%= @activity.description %> </p>
+
+<p><%= button_to 'add_record_to_activity',  new_activity_record_path, :method => "get" %></p>

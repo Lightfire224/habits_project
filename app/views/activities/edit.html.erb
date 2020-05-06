@@ -1,0 +1,12 @@
+<h2> Edit @habit.name </h2>
+
+<%= form_for @habit do |f| %>
+<%= f.label :Name %><br>
+<%= f.text_field :name %>
+<br><br>
+
+<%= f.label :Description %><br>
+<%= f.text_area :description %><br>
+
+<%= f.submit %>
+<% end %>

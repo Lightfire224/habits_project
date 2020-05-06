@@ -5,6 +5,7 @@ class HabitsController < ApplicationController
 
     def show
         @habit = Habit.find(params[:id])
+        @user = User.find(params[:id])
     end
 
     def new

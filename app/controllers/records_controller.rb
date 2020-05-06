@@ -9,11 +9,12 @@ class RecordsController < ApplicationController
 
     def new
         @record = Record.new
+        @activity = Activity.find(params[:activity_id])
     end
 
     def create
         @record = Record.create(record_params)
-        redirect_to record_path(@record)
+        redirect_to activity_record_path(params[:activity_id], @record)
     end
 
     def edit
@@ -35,6 +36,12 @@ class RecordsController < ApplicationController
     private
 
     def record_params
-        params.require(:record).permit(:name, :description, :habit_id)
+        # params.permit(:activity_id).require(:record).permit(:title, :reflection)
+        params_hash = params.require(:record).permit(:title, :reflection)
+        #<ActionController::Parameters {"title"=>"dafas", "reflection"=>"dfdsafdsa"} permitted: true>
+        params_hash[:activity_id] = params[:activity_id]
+        # => <ActionController::Parameters {"title"=>"Titleeee", "reflection"=>"REFLEX", "activity_id"=>"3"} permitted: true>
+        #params_hash a hash... ^^ adds the key of activity_id and its value to our hash.
+        params_hash
     end
 end

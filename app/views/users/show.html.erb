@@ -2,4 +2,12 @@
 <p> Occupation: <%= @user.occupation %> </p>
 <p> Age: <%= @user.age %> </p>
 
+<% @user.habits.each do |habit|%>
+    <h3>Habit: <%= link_to habit.name, habit_path(habit) %></h3>
+        <h4>Activity: </h4>
+        <% habit.activities.each do |activity| %>
+        <%= link_to activity.name, activity_path(activity) %> <br>
+    <% end %>
+<% end %>
+
 

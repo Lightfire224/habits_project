@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 2020_05_05_144409) do
   end
 
   create_table "records", force: :cascade do |t|
+    t.string "title"
     t.datetime "time"
     t.string "reflection"
-    t.integer "user_activity_id"
+    t.integer "activity_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

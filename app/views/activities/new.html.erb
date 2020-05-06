@@ -1,0 +1,17 @@
+<h2> New Activity </h2>
+
+<%= form_for @activity do |f| %>
+
+    <%= f.label :Habit %><br>
+    <%= f.collection_select :habit_id, Habit.all, :id, :name %><br>
+
+
+    <%= f.label :Name %><br>
+    <%= f.text_field :name %><br>
+    
+    <%= f.label :Description %><br>
+    <%= f.text_area :description %><br>
+
+    <%= f.submit %>
+<% end %>
+

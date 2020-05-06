@@ -1,3 +1,3 @@
 class Record < ApplicationRecord
-    belongs_to :user_activity
+    belongs_to :activity
 end
